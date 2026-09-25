@@ -1,0 +1,244 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-postgres",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "POSTGRES_API_KEY": "${secrets.postgres_key}",
+        "POSTGRES_ENDPOINT": "https://postgres.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The postgres MCP server exposes the full postgres API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where"
+    },
+    "redis": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-redis",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "REDIS_API_KEY": "${secrets.redis_key}",
+        "REDIS_ENDPOINT": "https://redis.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The redis MCP server exposes the full redis API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where possi"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-github",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "GITHUB_API_KEY": "${secrets.github_key}",
+        "GITHUB_ENDPOINT": "https://github.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The github MCP server exposes the full github API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    },
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-slack",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "SLACK_API_KEY": "${secrets.slack_key}",
+        "SLACK_ENDPOINT": "https://slack.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The slack MCP server exposes the full slack API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where possi"
+    },
+    "linear": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-linear",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "LINEAR_API_KEY": "${secrets.linear_key}",
+        "LINEAR_ENDPOINT": "https://linear.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The linear MCP server exposes the full linear API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    },
+    "sentry": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-sentry",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "SENTRY_API_KEY": "${secrets.sentry_key}",
+        "SENTRY_ENDPOINT": "https://sentry.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The sentry MCP server exposes the full sentry API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    },
+    "datadog": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-datadog",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "DATADOG_API_KEY": "${secrets.datadog_key}",
+        "DATADOG_ENDPOINT": "https://datadog.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The datadog MCP server exposes the full datadog API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where p"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-playwright",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "PLAYWRIGHT_API_KEY": "${secrets.playwright_key}",
+        "PLAYWRIGHT_ENDPOINT": "https://playwright.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The playwright MCP server exposes the full playwright API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff w"
+    },
+    "stripe": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-stripe",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "STRIPE_API_KEY": "${secrets.stripe_key}",
+        "STRIPE_ENDPOINT": "https://stripe.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The stripe MCP server exposes the full stripe API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    },
+    "openai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-openai",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${secrets.openai_key}",
+        "OPENAI_ENDPOINT": "https://openai.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The openai MCP server exposes the full openai API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-filesystem",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "FILESYSTEM_API_KEY": "${secrets.filesystem_key}",
+        "FILESYSTEM_ENDPOINT": "https://filesystem.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The filesystem MCP server exposes the full filesystem API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff w"
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@northwind/mcp-memory",
+        "--verbose",
+        "--log-level",
+        "debug",
+        "--tool-groups",
+        "read,write,admin"
+      ],
+      "env": {
+        "MEMORY_API_KEY": "${secrets.memory_key}",
+        "MEMORY_ENDPOINT": "https://memory.internal.northwind.io",
+        "LOG_FORMAT": "json",
+        "LOG_LEVEL": "info",
+        "REQUEST_TIMEOUT_MS": "30000"
+      },
+      "description": "The memory MCP server exposes the full memory API surface to the agent, including read and write operations, administrative endpoints, bulk import/export utilities, and webhook management. Enable only the tool groups the current task needs; each enabled tool costs context on every turn. All changes to this area must go through the standard pull request workflow with at least one approval from a code owner. Do not merge your own pull requests. Keep pull requests focused and under four hundred lines of diff where pos"
+    }
+  }
+}

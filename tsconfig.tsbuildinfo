@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/samples.ts","./src/components/BeforeAfter.tsx","./src/components/Breakdown.tsx","./src/components/DropZone.tsx","./src/components/Gauge.tsx","./src/components/Header.tsx","./src/components/Suggestions.tsx","./src/lib/analyze.ts","./src/lib/format.ts","./src/lib/tokenizer.ts"],"version":"5.6.3"}
