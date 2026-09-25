@@ -47,6 +47,10 @@ Sample files can be regenerated with `pnpm gen-samples`.
 - **lucide-react** — icons
 - GitHub Pages deploy via Actions (`base: '/contextdiet/'`)
 
+## 📸 Screenshots
+
+![ContextDiet context analysis dashboard](screenshots/demo.png)
+
 ## 📐 How token counting works
 
 Text is encoded with `gpt-tokenizer`'s BPE encoder (the same token family as modern OpenAI models) in 200k-character chunks and summed. Counts are accurate estimates — exact model internals may differ slightly, but they're in the right neighborhood for diet planning.
